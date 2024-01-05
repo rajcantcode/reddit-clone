@@ -29,7 +29,7 @@ const Layout = async ({
       posts: {
         include: {
           author: true,
-          vote: true,
+          votes: true,
         },
       },
     },

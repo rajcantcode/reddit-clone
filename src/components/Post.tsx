@@ -13,7 +13,7 @@ interface PostProps {
   subredditName: string;
   post: Post & {
     author: User;
-    vote: Vote[];
+    votes: Vote[];
   };
   commentAmt: number;
   votesAmt: number;

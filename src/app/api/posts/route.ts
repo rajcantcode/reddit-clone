@@ -61,7 +61,7 @@ export async function GET(req: Request) {
       },
       include: {
         subreddit: true,
-        vote: true,
+        votes: true,
         author: true,
         comments: true,
       },
