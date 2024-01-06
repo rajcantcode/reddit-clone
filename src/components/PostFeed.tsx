@@ -57,7 +57,7 @@ const PostFeed: FC<PostFeedProps> = ({ initialPosts, subredditName }) => {
           (vote) => vote.userId === session?.user?.id
         );
 
-        if (index === posts.length - 1) {
+        if (posts.length >= 2 && posts.length - 2 === index) {
           return (
             <li key={post.id} ref={ref}>
               <Post
