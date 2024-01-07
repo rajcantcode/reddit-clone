@@ -50,7 +50,8 @@ const PostFeed: FC<PostFeedProps> = ({ initialPosts, subredditName }) => {
       {posts.map((post, index) => {
         const votesAmount = post.votes.reduce((acc, vote) => {
           if (vote.type === "UP") return acc + 1;
-          else return acc - 1;
+          if (vote.type === "DOWN") return acc - 1;
+          return acc;
         }, 0);
 
         const currentVote = post.votes.find(
@@ -71,14 +72,15 @@ const PostFeed: FC<PostFeedProps> = ({ initialPosts, subredditName }) => {
           );
         } else {
           return (
-            <Post
-              key={post.id}
-              post={post}
-              subredditName={post.subreddit.name}
-              commentAmt={post.comments.length}
-              currentVote={currentVote}
-              votesAmt={votesAmount}
-            />
+            <li key={post.id}>
+              <Post
+                post={post}
+                subredditName={post.subreddit.name}
+                commentAmt={post.comments.length}
+                currentVote={currentVote}
+                votesAmt={votesAmount}
+              />
+            </li>
           );
         }
       })}
