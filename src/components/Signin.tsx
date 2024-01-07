@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Icons } from "./icons";
 import UserAuthForm from "./UserAuthForm";
 
-const Signin = () => {
+const SignIn = () => {
   return (
     <div className="container mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[400px]">
       <div className="flex flex-col space-y-2 text-center">
@@ -28,4 +28,4 @@ const Signin = () => {
   );
 };
 
-export default Signin;
+export default SignIn;
