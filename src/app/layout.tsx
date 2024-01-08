@@ -5,7 +5,7 @@ import "@/styles/globals.css";
 import { Inter } from "next/font/google";
 import Providers from "@/components/Providers";
 export const metadata = {
-  title: "Breadit",
+  title: "Dingit",
   description: "A Reddit clone built with Next.js and TypeScript.",
 };
 

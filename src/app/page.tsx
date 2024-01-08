@@ -27,7 +27,7 @@ export default async function Home() {
           <dl className="px-6 py-4 -my-3 text-sm leading-6 divide-y divide-gray-100">
             <div className="flex justify-between py-3 gap-x-4">
               <p className="text-zinc-500">
-                Your personal Breadit frontpage. Come here to check in with your
+                Your personal Dingit frontpage. Come here to check in with your
                 favorite communities.
               </p>
             </div>

@@ -9,13 +9,13 @@ const SignUp = () => {
         <Icons.logo className="w-6 h-6 mx-auto" />
         <h1 className="text-2xl font-semibold tracking-tight">Sign Up</h1>
         <p className="max-w-xs mx-auto text-sm">
-          By continuing, you are setting up a Breadit account and agree to our
+          By continuing, you are setting up a Dingit account and agree to our
           User Agreement and Privacy Policy.
         </p>
         {/* Sign-in form */}
         <UserAuthForm />
         <p className="px-8 text-sm text-center text-zinc-700">
-          Already a Breaditter ??{" "}
+          Already a Dingitter ??{" "}
           <Link
             href="/sign-in"
             className="text-sm underline hover:text-zinc-800 underline-offset-4 "
