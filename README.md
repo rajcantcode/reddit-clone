@@ -1,5 +1,5 @@
 # Dingit - A Modern Fullstack Reddit Clone
-Built with the Next.js App Router, TypeScript & Tailwind
+Built with the Next.js App Router, TypeScript & Tailwind \
 This project is a fullstack application based on the following [tutorial](https://github.com/joschan21/breadit)
 
 ## Features
