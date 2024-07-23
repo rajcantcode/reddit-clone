@@ -4,12 +4,14 @@ import { getAuthSession } from "@/lib/auth";
 import { db } from "@/lib/db";
 import { notFound } from "next/navigation";
 import { FC } from "react";
-import PostFeed from "@/components/PostFeed";
+import dynamic from "next/dynamic";
 interface pageProps {
   params: {
     slug: string;
   };
 }
+
+const NoSSR = dynamic(() => import("@/components/PostFeed"), { ssr: false });
 
 const page = async ({ params }: pageProps) => {
   const { slug } = params;
@@ -42,7 +44,7 @@ const page = async ({ params }: pageProps) => {
         r/{subreddit.name}
       </h1>
       <MiniCreatePost session={session} />
-      <PostFeed initialPosts={subreddit.posts} subredditName={subreddit.name} />
+      <NoSSR initialPosts={subreddit.posts} subredditName={subreddit.name} />
     </>
   );
 };

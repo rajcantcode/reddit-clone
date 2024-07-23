@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import "@/styles/globals.css";
 import { Inter } from "next/font/google";
 import Providers from "@/components/Providers";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 export const metadata = {
   title: "Dingit",
   description: "A Reddit clone built with Next.js and TypeScript.",
@@ -30,6 +31,7 @@ export default function RootLayout({
           <Navbar />
           <div className="container h-full pt-12 mx-auto max-w-7xl">
             {children}
+            <SpeedInsights />
           </div>
           <Toaster />
         </Providers>

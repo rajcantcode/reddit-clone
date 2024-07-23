@@ -1,4 +1,4 @@
-import { Post, User, Vote } from "@prisma/client";
+import { Post as PostType, User, Vote } from "@prisma/client";
 import { FC, useRef } from "react";
 // import { formatTimeToNow } from "../lib/utils";
 import { formatTimeToNow } from "@/lib/utils";
@@ -11,7 +11,7 @@ type PartialVote = Pick<Vote, "type">;
 
 interface PostProps {
   subredditName: string;
-  post: Post & {
+  post: PostType & {
     author: User;
     votes: Vote[];
   };
