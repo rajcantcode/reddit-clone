@@ -19,4 +19,4 @@ To run this project locally, run
 `npm install`
 `npm run dev`
 
-and copy the .env.example variables into a separate .env file:
+and copy the .env.example variables into a separate .env file
