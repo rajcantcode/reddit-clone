@@ -65,4 +65,10 @@ export const authOptions: NextAuthOptions = {
   },
 };
 
-export const getAuthSession = () => getServerSession(authOptions);
+export const getAuthSession = () => {
+  // Calculate time taken to get session
+  console.time("getServerSession");
+  const session = getServerSession(authOptions);
+  console.timeEnd("getServerSession");
+  return session;
+};
